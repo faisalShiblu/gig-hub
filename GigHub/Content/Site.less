@@ -1,0 +1,265 @@
+﻿@color_1: red;
+@color_2: #ffffff;
+@color_3: white;
+@color_4: #333333;
+@font_family_1: Lato, Arial, Helvetica, sans-serif;
+@background_color_1: #ff4342;
+@background_color_2: rgba(205, 40, 39, 0.55);
+@background_color_3: red;
+@background_color_4: #f7f7f7;
+@border_color_1: #ff4342;
+@border_color_2: #2196f3;
+@border_top_color_1: #ffffff;
+@border_bottom_color_1: #ffffff;
+
+/* Set padding to keep content from hitting the edges */
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+/* Set width on the form input elements since they're 100% wide by default */
+/*Override bootstrap */
+/*Page Level Styles*/
+body {
+	padding-top: 90px;
+	padding-bottom: 20px;
+	font-size: 17px;
+	font-family: @font_family_1;
+}
+
+.body-content {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.dl-horizontal {
+	dt {
+		white-space: normal;
+	}
+}
+
+input {
+	max-width: 280px;
+}
+
+select {
+	max-width: 280px;
+}
+
+textarea {
+	max-width: 280px;
+}
+
+span.field-validation-error {
+	color: @color_1;
+	font-weight: bold;
+}
+
+.voffset { margin-top: 2.5px;}
+.voffset1 {	margin-top: 5px;}
+.voffset2 {	margin-top: 10px;}
+.voffset3 {	margin-top: 20px;}
+.voffset4 {	margin-top: 40px;}
+.voffset5 {	margin-top: 80px;}
+
+/*Bootstrap Overrides*/
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('fonts/glyphicons-halflings-regular.eot');
+  src: url('fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('fonts/glyphicons-halflings-regular.woff') format('woff'), url('fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
+.popover {
+	box-shadow: none;
+}
+
+.navbar-inverse {
+	background-color: @background_color_1;
+	border-color: @border_color_1;
+
+	.navbar-nav {
+		>li {
+			>a {
+				color: @color_2;
+			}
+		}
+		>.open {
+			>a {
+				background-color: @background_color_2;
+				&:hover {
+					background-color: @background_color_2;
+				}
+				&:focus {
+					background-color: @background_color_2;
+				}
+			}
+		}
+
+		>.dropdown {
+			>a {
+				.caret {
+					border-top-color: @border_top_color_1;
+					border-bottom-color: @border_bottom_color_1;
+				}
+			}
+		}
+	}
+
+	.navbar-brand {
+		color: @color_2;
+	}
+
+	.notifications {
+		position: relative;
+		.badge {
+			position: absolute;
+			top: 8px;
+			right: -1px;
+			background: #a80a0a;
+		}
+	}
+}
+
+.dropdown-menu {
+	box-shadow: none;
+}
+
+.navbar-brand {
+	font-weight: 700;
+}
+
+h1 {font-family: @font_family_1;}
+h2 {font-family: @font_family_1;}
+h3 {font-family: @font_family_1;}
+h4 {font-family: @font_family_1;}
+h5 {font-family: @font_family_1;}
+h6 {font-family: @font_family_1;}
+.h1 {font-family: @font_family_1;}
+.h2 {font-family: @font_family_1;}
+.h3 {font-family: @font_family_1;}
+.h4 {font-family: @font_family_1;}
+.h5 {font-family: @font_family_1;}
+.h6 {font-family: @font_family_1;}
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+.form-control {
+	font-size: 17px;
+	height: 44px;
+	border-radius: 9px;
+
+	&:focus {
+		border-color: @border_color_2;
+		box-shadow: none;
+	}
+}
+
+.btn {
+	border-radius: 9px;
+}
+
+.gigs {
+	list-style: none;
+
+	>li {
+		position: relative;
+		margin-bottom: 30px;
+
+		.date {
+			background-color: @background_color_3;
+			color: @color_3;
+			text-align: center;
+			width: 60px;
+			border-radius: 8px;
+
+			.month {
+				text-transform: uppercase;
+				font-size: 14px;
+				font-weight: bold;
+				padding: 2px 6px;
+			}
+
+			.day {
+				background-color: @background_color_4;
+				color: @color_4;
+				font-size: 20px;
+				padding: 6px 12px;
+			}
+		}
+
+		.details {
+			position: absolute;
+			top: 0;
+			left: 70px;
+
+			.artist {
+				font-weight: bold;
+				display: block;
+			}
+
+			.genre {
+				font-size: 14px;
+				display: block;
+				margin-bottom: 4px;
+			}
+		}
+
+		.actions {
+			font-size: 15px;
+			display: none;
+		}
+
+		&:hover {
+
+			.actions {
+				display: block;
+			}
+		}
+	}
+}
+
+.follow {
+	list-style: none;
+
+	>li {
+		>.artistName {
+			font-weight: bold;
+			display: block;
+		}
+	}
+}
+
+.popover-notifications {
+
+	.popover-content {
+		padding: 0;
+	}
+
+	ul.notifications {
+		list-style: none;
+		padding-left: 0;
+
+		>li {
+			border-bottom: 1px solid #dddddd;
+			padding: 10px;
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+
+		.highlight {
+			font-weight: bold;
+		}
+	}
+}
+
+#searchGigs {
+	 width: 400px;
+	
+	 input {
+		max-width: none;
+	 }
+}
+
